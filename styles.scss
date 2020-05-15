@@ -1,0 +1,310 @@
+$primary : #E9C860;/* rgb(233,200,96) gold */
+$secondary :  #454545; /*69,69,69  grey  * /
+
+/* variables */
+
+/* reset */
+body,p,a,ul,li{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+/* base styles */
+body,html{
+  overflow-x: hidden;
+  font-family: 'Rubik Regular';
+  height: 100%;
+}
+.icon{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+input, textarea{
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+  color: #f2f2f2;
+}
+
+
+
+/* fonts */
+@font-face {
+    font-family: 'Rubik Regular';
+    src: url('fonts/Rubik-Regular.ttf');
+}
+h1,h2,h3,h4{
+  color: $primary;
+  font-weight: normal;
+}
+.navbar-brand{
+  color:$secondary;
+  font-size: 1.8rem
+}
+p,li{
+  color: $primary;
+}
+h1,h3{
+  font-size: 1.7em;
+}
+h2{
+  font-size: 1.2em;
+}
+h4{
+  font-size: 1.1em;
+}
+.leading{
+  font-size: 1.1em;
+}
+
+/* mobile styles */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap:10px;
+}
+nav{
+  position: fixed;
+  li:hover, .dropdown-item:hover{
+    background-color: $secondary;
+    font-size: 1.1rem;
+    padding: 1vh;
+    color: white !important;
+  }
+}
+
+
+
+#welcome{
+  padding: 0 0px 20px 20px; /* top right bottom left */
+  grid-row: 1;
+  grid-column: 1/9;
+  word-wrap: normal;
+}
+
+.welcome-text a{
+  margin: 10px 0;/* top&bottom left&right */
+}
+
+.welcome-bg{
+  background-image: url('assets/genie.png');
+  /* Full height */
+  height: 60vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+#lead{
+  padding: 0 0px 20px 20px;
+  grid-row: 2;
+  grid-column: 1/9;
+}
+.lead-text{
+  color: $secondary ;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+}
+.about-section-cards{
+  background: rgba(69,69,69, 0.3);
+  padding: 5vh 7.5%;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+.about-section-cards *{
+  margin: 10px auto;
+}
+.about-main{
+  margin: 10px 10px;
+  display: grid;
+}
+.about-img{
+  grid-row: 1;
+  background-image: url('assets/genie.png');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: right;
+  width: 80%;
+  height: 20em;
+  float: left;
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: -3;
+  padding: 0;
+  overflow-x:hidden;
+}
+.about-text{
+  grid-row:  2;
+}
+.about-team{
+  grid-row:  3;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.about-titles{
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  background: rgba(233,200,96, 0.4);
+  width: 50vw;
+  border-radius: 50%;
+
+  i{
+    font-size: 10px;
+  }
+}
+
+#contact-form{
+  width: 70vw;
+  margin: 10px auto;
+}
+#contact-table{
+  width: 50vw;
+  margin: 20px auto;
+}
+.leading > p{
+  width: 80vw;
+  margin: 10px auto;
+}
+#forms{
+  width: 80vw;
+  margin: 10px auto;
+}
+.login-bg{
+  background-image: url('assets/bg.jpg');
+  /* Full height */
+  height: 60vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+#bg1{
+  grid-column: 1/3;
+  grid-row: 1;
+  background: rgba(103, 232, 220, 0.3);
+  background-position: left;
+  height: 300px;
+  width: 300px;
+  float: left;
+  position: fixed;
+  left: -10px;
+  bottom:  20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-radius: 50%;
+}
+
+footer::before{
+  content: " ";
+  clear: both;
+
+}
+footer{
+  margin-top: 10px;
+  position: fixed;
+  bottom: 0px;
+  padding: 30px 20px;
+  background-color: #14153D;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  max-height: 100px;
+  width: 100%;
+  overflow-y: hidden;
+
+  .copyright{
+    grid-column: 1/5;
+    font-size: 0.7em;
+  }
+  .social{
+    grid-column: 7/9;
+    display: flex;
+    justify-content: flex-end;
+  }
+  ul{
+    list-style-type: none;
+  }
+  li{
+    margin: 0 6px;
+  }
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+
+
+
+  .welcome-bg{
+    height: 70vh;
+    background-position: top;
+    background-size: 55%;
+  }
+  .about-main{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    width: 80vw;
+    margin: 10px auto;
+  }
+
+  .about-img{
+    grid-column: 3/7;
+    grid-row: 1;
+  }
+  .about-text{
+    grid-column: 7/12;
+    grid-row: 1;
+  }
+  .about-team{
+    grid-column: 3/11;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about-titles{
+    width: 15vw;
+    img{
+      max-width: 10vw;
+    }
+  }
+
+
+}
+
+/* large tab & small laptop styles */
+@media screen and (min-width: 960px) {
+  body{
+    font-size: 18px;
+
+  }
+
+
+}
+/* desktop styles */
+@media screen and (min-width: 720px) {
+  body{
+    font-size: 20px;
+  }
+
+
+}
